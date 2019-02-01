@@ -1,0 +1,16 @@
+{
+  "short_name": "Bottts",
+  "name": "Bottts Maker",
+  "icons": [
+    {
+      "src": "/images/homescreen192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#54acee",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#54acee"
+}

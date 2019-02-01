@@ -1,2 +1,3 @@
 # bottts-maker
-Creating Botts avatars
+
+Creating Bottts avatars
