@@ -1,10 +1,29 @@
 import React from 'react'
+import Antenna1 from './Sides/Antenna1'
 import Antenna2 from './Sides/Antenna2'
+import Cables1 from './Sides/Cables1'
+import Cables2 from './Sides/Cables2'
+import Round from './Sides/Round'
+import Square from './Sides/Square'
+import SquareAssymetric from './Sides/SquareAssymetric'
 
-const Sides = () => {
+const Sides = props => {
+  const types = {
+    Antenna1,
+    Antenna2,
+    Cables1,
+    Cables2,
+    Round,
+    Square,
+    SquareAssymetric
+  }
+  const typeKeys = Object.keys(types)
+  const Type = props.randomize
+    ? types[typeKeys[parseInt(typeKeys.length * Math.random())]]
+    : types[typeKeys[props.type]]
   return (
     <g id="side" transform="translate(0, 66)">
-      <Antenna2 />
+      <Type />
     </g>
   )
 }

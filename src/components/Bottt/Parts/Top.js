@@ -1,10 +1,37 @@
 import React from 'react'
 import Antenna from './Tops/Antenna'
+import AntennaCrooked from './Tops/AntennaCrooked'
+import Bulb1 from './Tops/Bulb1'
+import Bulb2 from './Tops/Bulb2'
+import GlowingBulb1 from './Tops/GlowingBulb1'
+import GlowingBulb2 from './Tops/GlowingBulb2'
+import Horns from './Tops/Horns'
+import Lights from './Tops/Lights'
+import Plankton from './Tops/Plankton'
+import Pyramid from './Tops/Pyramid'
+import Radar from './Tops/Radar'
 
-const Top = () => {
+const Top = props => {
+  const types = {
+    Antenna,
+    AntennaCrooked,
+    Bulb1,
+    Bulb2,
+    GlowingBulb1,
+    GlowingBulb2,
+    Horns,
+    Lights,
+    Plankton,
+    Pyramid,
+    Radar
+  }
+  const typeKeys = Object.keys(types)
+  const Type = props.randomize
+    ? types[typeKeys[parseInt(typeKeys.length * Math.random())]]
+    : types[typeKeys[props.type]]
   return (
     <g id="top" transform="translate(41, 0)">
-      <Antenna />
+      <Type />
     </g>
   )
 }
