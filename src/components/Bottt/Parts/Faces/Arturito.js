@@ -24,18 +24,18 @@ const Artuito = () => {
       <g mask="url(#facemask)">
         <rect x="-1" y="-1" width="132" height="122" fill="#ECEFF1" />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M0 80H10V107H0V80Z"
           fill="#0040AE"
-          fill-opacity="0.8"
+          fillOpacity="0.8"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M0 111H130V116H0V111Z"
           fill="#0040AE"
-          fill-opacity="0.8"
+          fillOpacity="0.8"
         />
         <rect
           x="121"
@@ -43,7 +43,7 @@ const Artuito = () => {
           width="9"
           height="27"
           fill="#0040AE"
-          fill-opacity="0.8"
+          fillOpacity="0.8"
         />
         <rect
           x="7.2998"
@@ -51,7 +51,7 @@ const Artuito = () => {
           width="54.9"
           height="16.1835"
           fill="#0040AE"
-          fill-opacity="0.8"
+          fillOpacity="0.8"
         />
         <rect
           x="65.7998"
@@ -59,7 +59,7 @@ const Artuito = () => {
           width="54.9"
           height="16.1835"
           fill="#0040AE"
-          fill-opacity="0.8"
+          fillOpacity="0.8"
         />
       </g>
     </>

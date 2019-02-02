@@ -10,7 +10,7 @@ const Square2 = () => {
         height="4"
         rx="2"
         fill="black"
-        fill-opacity="0.8"
+        fillOpacity="0.8"
       />
     </>
   )

@@ -4,11 +4,11 @@ const Smile2 = () => {
   return (
     <>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M18 10.2222C18 21.7845 24.4741 28 38 28C51.5182 28 58 21.6615 58 10.2222C58 9.49622 57.1739 8 55 8C39.2707 8 29.1917 8 21 8C18.949 8 18 9.38479 18 10.2222Z"
         fill="black"
-        fill-opacity="0.8"
+        fillOpacity="0.8"
       />
       <mask
         id="mouthmask"
@@ -20,8 +20,8 @@ const Smile2 = () => {
         height="20"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M18 10.2222C18 21.7845 24.4741 28 38 28C51.5182 28 58 21.6615 58 10.2222C58 9.49622 57.1739 8 55 8C39.2707 8 29.1917 8 21 8C18.949 8 18 9.38479 18 10.2222Z"
           fill="white"
         />

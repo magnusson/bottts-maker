@@ -4,8 +4,8 @@ const Pyramid = () => {
   return (
     <>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M50 8L82 52H18L50 8Z"
         fill="#E1E6E8"
       />
@@ -19,8 +19,8 @@ const Pyramid = () => {
         height="44"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M50 8L82 52H18L50 8Z"
           fill="white"
         />
@@ -33,7 +33,7 @@ const Pyramid = () => {
           width="30"
           height="48"
           fill="white"
-          fill-opacity="0.8"
+          fillOpacity="0.8"
         />
       </g>
     </>

@@ -10,7 +10,7 @@ const Grill2 = () => {
         height="14"
         rx="2"
         fill="black"
-        fill-opacity="0.6"
+        fillOpacity="0.6"
       />
       <rect
         x="14"
@@ -19,7 +19,7 @@ const Grill2 = () => {
         height="14"
         rx="2"
         fill="black"
-        fill-opacity="0.6"
+        fillOpacity="0.6"
       />
       <rect
         x="42"
@@ -28,7 +28,7 @@ const Grill2 = () => {
         height="14"
         rx="2"
         fill="black"
-        fill-opacity="0.6"
+        fillOpacity="0.6"
       />
       <rect
         x="56"
@@ -37,7 +37,7 @@ const Grill2 = () => {
         height="14"
         rx="2"
         fill="black"
-        fill-opacity="0.6"
+        fillOpacity="0.6"
       />
     </>
   )
