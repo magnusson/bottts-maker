@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "repository": "https://github.com/magnusson/bottts-maker.git",
   "dependencies": {
+    "file-saver": "^2.0.0",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-scripts": "2.0.3"

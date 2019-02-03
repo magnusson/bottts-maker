@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Bottt from './components/Bottt/Bottt'
 import Controls from './components/Controls'
+import Download from './components/Download'
+
+const botttRef = React.createRef()
 
 class App extends Component {
   state = {
@@ -43,7 +46,14 @@ class App extends Component {
     return (
       <div>
         <h1>Bottts Maker</h1>
-        <Bottt top={top} side={side} face={face} eyes={eyes} mouth={mouth} />
+        <Bottt
+          top={top}
+          side={side}
+          face={face}
+          eyes={eyes}
+          mouth={mouth}
+          ref={botttRef}
+        />
         <Controls
           top={top}
           side={side}
@@ -54,6 +64,7 @@ class App extends Component {
         >
           <button onClick={this.randomizeBottt}>Randomize</button>
         </Controls>
+        <Download svgRef={botttRef} />
       </div>
     )
   }
