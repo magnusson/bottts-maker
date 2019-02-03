@@ -20,7 +20,7 @@ const Sides = props => {
   const typeKeys = Object.keys(types)
   const Type = types[typeKeys[props.type]]
   return (
-    <g id="side" transform="translate(0, 66)">
+    <g id="side_part" transform="translate(0, 66)">
       <Type />
     </g>
   )

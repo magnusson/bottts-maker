@@ -7,13 +7,14 @@ import Side from './Parts/Side'
 
 class Bottt extends Component {
   render() {
-    const { side, top, face, eyes, mouth } = this.props
+    const { side, top, face, eyes, mouth, className } = this.props
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="180"
         height="180"
         viewBox="0 0 180 180"
+        className={className}
       >
         <Side type={side.value} />
         <Top type={top.value} />

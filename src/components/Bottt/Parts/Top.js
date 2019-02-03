@@ -28,7 +28,7 @@ const Top = props => {
   const typeKeys = Object.keys(types)
   const Type = types[typeKeys[props.type]]
   return (
-    <g id="top" transform="translate(41, 0)">
+    <g id="top_part" transform="translate(41, 0)">
       <Type />
     </g>
   )

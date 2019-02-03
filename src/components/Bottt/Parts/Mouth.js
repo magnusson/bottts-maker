@@ -28,7 +28,7 @@ const Mouth = props => {
   const typeKeys = Object.keys(types)
   const Type = types[typeKeys[props.type]]
   return (
-    <g id="mouth" transform="translate(52, 124)">
+    <g id="mouth_part" transform="translate(52, 124)">
       <Type />
     </g>
   )

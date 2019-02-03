@@ -1,9 +1,27 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
+import { Button } from './styles'
+import { device } from './utils'
 import Bottt from './components/Bottt/Bottt'
 import Controls from './components/Controls'
 import Download from './components/Download'
 
 const botttRef = React.createRef()
+
+const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
+`
+
+const BotttWrapper = styled(Bottt)`
+  margin: auto;
+`
 
 class App extends Component {
   state = {
@@ -44,9 +62,8 @@ class App extends Component {
   render() {
     const { top, side, face, eyes, mouth } = this.state
     return (
-      <div>
-        <h1>Bottts Maker</h1>
-        <Bottt
+      <Main>
+        <BotttWrapper
           top={top}
           side={side}
           face={face}
@@ -62,10 +79,10 @@ class App extends Component {
           mouth={mouth}
           setType={this.setType}
         >
-          <button onClick={this.randomizeBottt}>Randomize</button>
+          <Button onClick={this.randomizeBottt}>Randomize</Button>
+          <Download svgRef={botttRef} />
         </Controls>
-        <Download svgRef={botttRef} />
-      </div>
+      </Main>
     )
   }
 }

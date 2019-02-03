@@ -1,5 +1,26 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
+import { device } from '../utils'
 import Slider from './Slider'
+
+const ControlsWrapper = styled.div`
+  background-color: #fff;
+  color: #333;
+  overflow: auto;
+  padding: 20px;
+
+  @media ${device.tablet} {
+    width: 256px;
+  }
+`
+
+const ControlsTitle = styled.h3`
+  font-weight: 700;
+`
+
+const StyledSlider = styled(Slider)`
+  margin-bottom: 12px;
+`
 
 class Controls extends Component {
   handleChange = e => {
@@ -10,36 +31,37 @@ class Controls extends Component {
   render() {
     const { side, top, face, eyes, mouth, children } = this.props
     return (
-      <div>
-        <Slider
+      <ControlsWrapper>
+        <ControlsTitle>Controls</ControlsTitle>
+        <StyledSlider
           label="Top"
           id="top"
           max={top.max}
           value={top.value}
           setValue={this.handleChange}
         />
-        <Slider
+        <StyledSlider
           label="Side"
           id="side"
           max={side.max}
           value={side.value}
           setValue={this.handleChange}
         />
-        <Slider
+        <StyledSlider
           label="Face"
           id="face"
           max={face.max}
           value={face.value}
           setValue={this.handleChange}
         />
-        <Slider
+        <StyledSlider
           label="Eyes"
           id="eyes"
           max={eyes.max}
           value={eyes.value}
           setValue={this.handleChange}
         />
-        <Slider
+        <StyledSlider
           label="Mouth"
           id="mouth"
           max={mouth.max}
@@ -47,7 +69,7 @@ class Controls extends Component {
           setValue={this.handleChange}
         />
         {children}
-      </div>
+      </ControlsWrapper>
     )
   }
 }

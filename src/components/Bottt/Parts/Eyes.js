@@ -38,7 +38,7 @@ const Eyes = props => {
   const typeKeys = Object.keys(types)
   const Type = types[typeKeys[props.type]]
   return (
-    <g id="eyes" transform="translate(38, 76)">
+    <g id="eyes_part" transform="translate(38, 76)">
       <Type />
     </g>
   )

@@ -1,8 +1,14 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import styled from 'styled-components'
+import { Button } from '../styles'
 import saveAs from 'file-saver'
 
 const canvasRef = React.createRef()
+
+const SecretCanvas = styled.canvas`
+  display: none;
+`
 
 class Download extends Component {
   downloadPNG = () => {
@@ -24,8 +30,8 @@ class Download extends Component {
   render() {
     return (
       <>
-        <button onClick={this.downloadPNG}>Download</button>
-        <canvas
+        <Button onClick={this.downloadPNG}>Download</Button>
+        <SecretCanvas
           width="180"
           height="180"
           style={{ display: 'none' }}
