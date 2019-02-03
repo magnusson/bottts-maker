@@ -36,9 +36,7 @@ const Eyes = props => {
     Shade
   }
   const typeKeys = Object.keys(types)
-  const Type = props.randomize
-    ? types[typeKeys[parseInt(typeKeys.length * Math.random())]]
-    : types[typeKeys[props.type]]
+  const Type = types[typeKeys[props.type]]
   return (
     <g id="eyes" transform="translate(38, 76)">
       <Type />

@@ -26,9 +26,7 @@ const Top = props => {
     Radar
   }
   const typeKeys = Object.keys(types)
-  const Type = props.randomize
-    ? types[typeKeys[parseInt(typeKeys.length * Math.random())]]
-    : types[typeKeys[props.type]]
+  const Type = types[typeKeys[props.type]]
   return (
     <g id="top" transform="translate(41, 0)">
       <Type />

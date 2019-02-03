@@ -3,12 +3,12 @@ import Slider from './Slider'
 
 class Controls extends Component {
   handleChange = e => {
-    let typeValue = Object.assign({}, this.props.types[e.target.name])
+    let typeValue = Object.assign({}, this.props[e.target.name])
     typeValue.value = e.target.value
     this.props.setType({ [e.target.name]: typeValue })
   }
   render() {
-    const { side, top, face, eyes, mouth } = this.props.types
+    const { side, top, face, eyes, mouth, children } = this.props
     return (
       <div>
         <Slider
@@ -46,7 +46,7 @@ class Controls extends Component {
           value={mouth.value}
           setValue={this.handleChange}
         />
-        {this.props.children}
+        {children}
       </div>
     )
   }

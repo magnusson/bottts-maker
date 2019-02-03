@@ -18,9 +18,7 @@ const Sides = props => {
     SquareAssymetric
   }
   const typeKeys = Object.keys(types)
-  const Type = props.randomize
-    ? types[typeKeys[parseInt(typeKeys.length * Math.random())]]
-    : types[typeKeys[props.type]]
+  const Type = types[typeKeys[props.type]]
   return (
     <g id="side" transform="translate(0, 66)">
       <Type />

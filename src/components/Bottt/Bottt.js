@@ -7,7 +7,7 @@ import Side from './Parts/Side'
 
 class Bottt extends Component {
   render() {
-    const { side, top, face, eyes, mouth } = this.props.types
+    const { side, top, face, eyes, mouth } = this.props
     return (
       <svg width="180" height="180" viewBox="0 0 180 180">
         <Side type={side.value} />

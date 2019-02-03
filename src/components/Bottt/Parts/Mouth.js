@@ -26,9 +26,7 @@ const Mouth = props => {
     Square2
   }
   const typeKeys = Object.keys(types)
-  const Type = props.randomize
-    ? types[typeKeys[parseInt(typeKeys.length * Math.random())]]
-    : types[typeKeys[props.type]]
+  const Type = types[typeKeys[props.type]]
   return (
     <g id="mouth" transform="translate(52, 124)">
       <Type />
