@@ -3,7 +3,7 @@ import React from 'react'
 const Cables2 = () => {
   return (
     <>
-      <g opacity="0.9">
+      <g opacity="0.9" fill="transparent">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -24,7 +24,7 @@ const Cables2 = () => {
           strokeWidth="4"
         />
       </g>
-      <g opacity="0.9">
+      <g opacity="0.9" fill="transparent">
         <path
           d="M168.606 60.4234C164.326 53.0099 154.653 50.5817 147 55"
           stroke="#2A3544"

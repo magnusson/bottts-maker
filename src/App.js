@@ -29,7 +29,8 @@ class App extends Component {
     side: { value: 0, max: 6 },
     face: { value: 0, max: 7 },
     eyes: { value: 0, max: 15 },
-    mouth: { value: 0, max: 10 }
+    mouth: { value: 0, max: 10 },
+    size: 256
   }
   setType = type => {
     this.setState(type)
@@ -60,7 +61,7 @@ class App extends Component {
     })
   }
   render() {
-    const { top, side, face, eyes, mouth } = this.state
+    const { top, side, face, eyes, mouth, size } = this.state
     return (
       <Main>
         <BotttWrapper
@@ -70,6 +71,7 @@ class App extends Component {
           eyes={eyes}
           mouth={mouth}
           ref={botttRef}
+          size={size}
         />
         <Controls
           top={top}
@@ -80,7 +82,7 @@ class App extends Component {
           setType={this.setType}
         >
           <Button onClick={this.randomizeBottt}>Randomize</Button>
-          <Download svgRef={botttRef} />
+          <Download svgRef={botttRef} size={size} />
         </Controls>
       </Main>
     )

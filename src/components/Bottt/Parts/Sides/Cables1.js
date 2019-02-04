@@ -3,14 +3,14 @@ import React from 'react'
 const Cables1 = () => {
   return (
     <>
-      <g opacity="0.9">
+      <g opacity="0.9" fill="transparent">
         <path
           d="M38 12C35.046 23.6966 18.0959 18.6663 14.6313 30.009C11.1668 41.3518 22.6565 50 32.1552 50"
           stroke="#2A3544"
           strokeWidth="6"
         />
       </g>
-      <g opacity="0.9">
+      <g opacity="0.9" fill="transparent">
         <path
           d="M150 55C158.394 58.4864 170.102 47.4063 166 38.5C161.898 29.5936 150 31.8056 150 19.195"
           stroke="#2A3544"

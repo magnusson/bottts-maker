@@ -32,9 +32,8 @@ class Download extends Component {
       <>
         <Button onClick={this.downloadPNG}>Download</Button>
         <SecretCanvas
-          width="180"
-          height="180"
-          style={{ display: 'none' }}
+          width={this.props.size}
+          height={this.props.size}
           ref={canvasRef}
         />
       </>
