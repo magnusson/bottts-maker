@@ -1,15 +1,8 @@
 import React from 'react'
 
-const Round1 = () => {
+const Round1 = props => {
   return (
     <>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M66 0C124.352 0 130.001 40.6854 130 78C129.999 111.315 104.534 120 66 120C28.5387 120 0 111.315 0 78C0 40.6854 7.64843 0 66 0Z"
-        fill="black"
-        fillOpacity="0.8"
-      />
       <mask
         id="facemask"
         mask-type="alpha"
@@ -27,7 +20,7 @@ const Round1 = () => {
         />
       </mask>
       <g mask="url(#facemask)">
-        <rect x="-4" y="-2" width="138" height="124" fill="#B0BEC5" />
+        <rect x="-4" y="-2" width="138" height="124" fill={props.color} />
       </g>
     </>
   )

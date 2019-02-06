@@ -1,14 +1,8 @@
 import React from 'react'
 
-const Pyramid = () => {
+const Pyramid = props => {
   return (
     <>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M50 8L82 52H18L50 8Z"
-        fill="#E1E6E8"
-      />
       <mask
         id="topmask"
         mask-type="alpha"
@@ -26,7 +20,7 @@ const Pyramid = () => {
         />
       </mask>
       <g mask="url(#topmask)">
-        <rect width="100" height="52" fill="#90A4AE" />
+        <rect width="100" height="52" fill={props.color} />
         <rect
           x="50"
           y="4"

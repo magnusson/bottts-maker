@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GlowingBulb1 = () => {
+const GlowingBulb1 = props => {
   return (
     <>
       <rect width="100" height="52" fill="#2B4E7E" />
@@ -26,7 +26,7 @@ const GlowingBulb1 = () => {
         fill="white"
         fillOpacity="0.8"
       />
-      <rect x="22" y="40" width="56" height="12" rx="1" fill="#48494B" />
+      <rect x="22" y="40" width="56" height="12" rx="1" fill={props.color} />
       <mask
         id="topmask"
         mask-type="alpha"

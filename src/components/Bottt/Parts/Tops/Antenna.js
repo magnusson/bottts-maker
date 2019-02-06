@@ -1,14 +1,8 @@
 import React from 'react'
 
-const Antenna = () => {
+const Antenna = props => {
   return (
     <>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M52 5H48V36H40C38.8954 36 38 36.8954 38 38V52H62V38C62 36.8954 61.1046 36 60 36H52V5Z"
-        fill="#E1E6E8"
-      />
       <mask
         id="topmask"
         mask-type="alpha"
@@ -26,7 +20,7 @@ const Antenna = () => {
         />
       </mask>
       <g mask="url(#topmask)">
-        <rect width="100" height="52" fill="#90A4AE" />
+        <rect width="100" height="52" fill={props.color} />
         <rect
           x="38"
           y="36"

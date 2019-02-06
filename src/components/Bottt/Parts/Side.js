@@ -21,7 +21,7 @@ const Sides = props => {
   const Type = types[typeKeys[props.type]]
   return (
     <g id="side_part" transform="translate(0, 66)">
-      <Type />
+      <Type color={props.color} />
     </g>
   )
 }

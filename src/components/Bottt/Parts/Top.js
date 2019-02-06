@@ -29,7 +29,7 @@ const Top = props => {
   const Type = types[typeKeys[props.type]]
   return (
     <g id="top_part" transform="translate(41, 0)">
-      <Type />
+      <Type color={props.color} />
     </g>
   )
 }

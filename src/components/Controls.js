@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { device } from '../utils'
 import Slider from './Slider'
+import ColorPicker from './ColorPicker'
 
 const ControlsWrapper = styled.div`
   background-color: #fff;
   color: #333;
-  overflow: auto;
   padding: 20px;
 
   @media ${device.tablet} {
@@ -40,6 +40,7 @@ class Controls extends Component {
           value={top.value}
           setValue={this.handleChange}
         />
+        <ColorPicker part={top} name="top" setColor={this.props.setColor} />
         <StyledSlider
           label="Side"
           id="side"
@@ -47,6 +48,7 @@ class Controls extends Component {
           value={side.value}
           setValue={this.handleChange}
         />
+        <ColorPicker part={side} name="side" setColor={this.props.setColor} />
         <StyledSlider
           label="Face"
           id="face"
@@ -54,6 +56,7 @@ class Controls extends Component {
           value={face.value}
           setValue={this.handleChange}
         />
+        <ColorPicker part={face} name="face" setColor={this.props.setColor} />
         <StyledSlider
           label="Eyes"
           id="eyes"

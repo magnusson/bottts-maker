@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Button } from './styles'
-import { device } from './utils'
+import { device, randomHex } from './utils'
 import Bottt from './components/Bottt/Bottt'
 import Controls from './components/Controls'
 import Download from './components/Download'
@@ -11,7 +11,7 @@ const botttRef = React.createRef()
 const Main = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
   justify-content: space-between;
 
   @media ${device.tablet} {
@@ -20,14 +20,18 @@ const Main = styled.div`
 `
 
 const BotttWrapper = styled(Bottt)`
-  margin: auto;
+  margin: 25px auto;
+
+  @media ${device.tablet} {
+    margin: auto;
+  }
 `
 
 class App extends Component {
   state = {
-    top: { value: 0, max: 10 },
-    side: { value: 0, max: 6 },
-    face: { value: 0, max: 7 },
+    top: { value: 0, max: 10, color: '#607D8B' },
+    side: { value: 0, max: 6, color: '#9CCC65' },
+    face: { value: 0, max: 7, color: '#9CCC65' },
     eyes: { value: 0, max: 15 },
     mouth: { value: 0, max: 10 },
     size: 256
@@ -35,20 +39,26 @@ class App extends Component {
   setType = type => {
     this.setState(type)
   }
+  setColor = color => {
+    this.setState(color)
+  }
   randomizeBottt = () => {
     const { top, side, face, eyes, mouth } = this.state
     this.setState({
       top: {
         value: Math.round(Math.random() * (top.max - 0) + 0),
-        max: top.max
+        max: top.max,
+        color: randomHex()
       },
       side: {
         value: Math.round(Math.random() * (side.max - 0) + 0),
-        max: side.max
+        max: side.max,
+        color: randomHex()
       },
       face: {
         value: Math.round(Math.random() * (face.max - 0) + 0),
-        max: face.max
+        max: face.max,
+        color: randomHex()
       },
       eyes: {
         value: Math.round(Math.random() * (eyes.max - 0) + 0),
@@ -80,6 +90,7 @@ class App extends Component {
           eyes={eyes}
           mouth={mouth}
           setType={this.setType}
+          setColor={this.setColor}
         >
           <Button onClick={this.randomizeBottt}>Randomize</Button>
           <Download svgRef={botttRef} size={size} />

@@ -1,14 +1,8 @@
 import React from 'react'
 
-const Bulb2 = () => {
+const Bulb2 = props => {
   return (
     <>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M48 0C39.1634 0 32 7.16344 32 16V32C32 36.4183 35.5817 40 40 40H23C22.4477 40 22 40.4477 22 41V51C22 51.5523 22.4477 52 23 52H77C77.5523 52 78 51.5523 78 51V41C78 40.4477 77.5523 40 77 40H60C64.4183 40 68 36.4183 68 32V16C68 7.16344 60.8366 0 52 0H48Z"
-        fill="#59C4FF"
-      />
       <mask
         id="topmask"
         mask-type="alpha"
@@ -26,7 +20,7 @@ const Bulb2 = () => {
         />
       </mask>
       <g mask="url(#topmask)">
-        <rect width="100" height="52" fill="#90A4AE" />
+        <rect width="100" height="52" fill={props.color} />
         <rect
           x="20"
           y="-3"

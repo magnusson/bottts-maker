@@ -16,9 +16,9 @@ class Bottt extends Component {
         viewBox="0 0 180 180"
         className={className}
       >
-        <Side type={side.value} />
-        <Top type={top.value} />
-        <Face type={face.value} />
+        <Side type={side.value} color={side.color} />
+        <Top type={top.value} color={top.color} />
+        <Face type={face.value} color={face.color} />
         <Eyes type={eyes.value} />
         <Mouth type={mouth.value} />
       </svg>

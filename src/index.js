@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-    background-color: #faf9fa;
+    background-color: #2b4e7e;
   }
 
   *,

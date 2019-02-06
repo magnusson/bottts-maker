@@ -1,14 +1,8 @@
 import React from 'react'
 
-const Artuito = () => {
+const Artuito = props => {
   return (
     <>
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M53.5683 39L55.5437 34.3851L49.3528 23.7098L52.2483 13.0836L49.3539 12.2949L46.1288 24.1305L52.179 34.5631L50.0881 39H38V52H62V39H53.5683Z"
-        fill="#E6E6E6"
-      />
       <mask
         id="topmask"
         mask-type="alpha"
@@ -26,7 +20,7 @@ const Artuito = () => {
         />
       </mask>
       <g mask="url(#topmask)">
-        <rect width="100" height="52" fill="#90A4AE" />
+        <rect width="100" height="52" fill={props.color} />
         <rect
           x="38"
           y="39"
