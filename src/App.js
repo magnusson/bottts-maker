@@ -29,9 +29,10 @@ const BotttWrapper = styled(Bottt)`
 
 class App extends Component {
   state = {
-    top: { value: 0, max: 10, color: '#607D8B' },
-    side: { value: 0, max: 6, color: '#9CCC65' },
+    top: { value: 1, max: 11, color: '#607D8B' },
+    side: { value: 0, max: 7, color: '#9CCC65' },
     face: { value: 0, max: 7, color: '#9CCC65' },
+    texture: { value: 0, max: 6 },
     eyes: { value: 0, max: 15 },
     mouth: { value: 0, max: 10 },
     size: 256
@@ -43,7 +44,7 @@ class App extends Component {
     this.setState(color)
   }
   randomizeBottt = () => {
-    const { top, side, face, eyes, mouth } = this.state
+    const { top, side, face, texture, eyes, mouth } = this.state
     this.setState({
       top: {
         value: Math.round(Math.random() * (top.max - 0) + 0),
@@ -60,6 +61,10 @@ class App extends Component {
         max: face.max,
         color: randomHex()
       },
+      texture: {
+        value: Math.round(Math.random() * (texture.max - 0) + 0),
+        max: texture.max
+      },
       eyes: {
         value: Math.round(Math.random() * (eyes.max - 0) + 0),
         max: eyes.max
@@ -70,14 +75,18 @@ class App extends Component {
       }
     })
   }
+  componentDidMount = () => {
+    this.randomizeBottt()
+  }
   render() {
-    const { top, side, face, eyes, mouth, size } = this.state
+    const { top, side, face, texture, eyes, mouth, size } = this.state
     return (
       <Main>
         <BotttWrapper
           top={top}
           side={side}
           face={face}
+          texture={texture}
           eyes={eyes}
           mouth={mouth}
           ref={botttRef}
@@ -87,6 +96,7 @@ class App extends Component {
           top={top}
           side={side}
           face={face}
+          texture={texture}
           eyes={eyes}
           mouth={mouth}
           setType={this.setType}

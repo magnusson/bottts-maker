@@ -21,6 +21,7 @@ const Round1 = props => {
       </mask>
       <g mask="url(#facemask)">
         <rect x="-4" y="-2" width="138" height="124" fill={props.color} />
+        {props.texture}
       </g>
     </>
   )

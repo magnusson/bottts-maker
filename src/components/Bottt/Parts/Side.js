@@ -9,6 +9,7 @@ import SquareAssymetric from './Sides/SquareAssymetric'
 
 const Sides = props => {
   const types = {
+    None: null,
     Antenna1,
     Antenna2,
     Cables1,
@@ -21,7 +22,7 @@ const Sides = props => {
   const Type = types[typeKeys[props.type]]
   return (
     <g id="side_part" transform="translate(0, 66)">
-      <Type color={props.color} />
+      {Type && <Type color={props.color} />}
     </g>
   )
 }

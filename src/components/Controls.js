@@ -29,7 +29,7 @@ class Controls extends Component {
     this.props.setType({ [e.target.name]: typeValue })
   }
   render() {
-    const { side, top, face, eyes, mouth, children } = this.props
+    const { side, top, face, texture, eyes, mouth, children } = this.props
     return (
       <ControlsWrapper>
         <ControlsTitle>Controls</ControlsTitle>
@@ -69,6 +69,13 @@ class Controls extends Component {
           id="mouth"
           max={mouth.max}
           value={mouth.value}
+          setValue={this.handleChange}
+        />
+        <StyledSlider
+          label="Texture"
+          id="texture"
+          max={texture.max}
+          value={texture.value}
           setValue={this.handleChange}
         />
         {children}

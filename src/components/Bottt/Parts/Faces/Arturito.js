@@ -57,6 +57,7 @@ const Artuito = props => {
           fill="#0040AE"
           fillOpacity="0.8"
         />
+        {props.texture}
       </g>
     </>
   )

@@ -29,6 +29,7 @@ const RoboCop = props => {
           fill="black"
           fillOpacity="0.8"
         />
+        {props.texture}
       </g>
     </>
   )

@@ -23,7 +23,7 @@ const Face = props => {
   const Type = types[typeKeys[props.type]]
   return (
     <g id="face_part" transform="translate(25, 44)">
-      <Type color={props.color} />
+      <Type color={props.color} texture={props.texture} />
     </g>
   )
 }

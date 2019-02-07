@@ -19,6 +19,7 @@ const Square2 = props => {
       </mask>
       <g mask="url(#facemask)">
         <rect x="-2" y="-2" width="134" height="124" fill={props.color} />
+        {props.texture}
       </g>
     </>
   )
