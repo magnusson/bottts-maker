@@ -3,7 +3,6 @@ import React from 'react'
 const GlowingBulb2 = props => {
   return (
     <>
-      <rect width="100" height="52" fill="#2B4E7E" />
       <g filter="url(#topfilter)">
         <path
           fillRule="evenodd"
