@@ -3,7 +3,6 @@ import React from 'react'
 const Hal = () => {
   return (
     <>
-      <rect width="104" height="48" fill="#9F9F9F" />
       <path
         fillRule="evenodd"
         clipRule="evenodd"

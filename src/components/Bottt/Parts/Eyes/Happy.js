@@ -3,7 +3,6 @@ import React from 'react'
 const Happy = () => {
   return (
     <>
-      <rect width="104" height="48" fill="#9F9F9F" />
       <path
         d="M18 19L30 17"
         stroke="black"

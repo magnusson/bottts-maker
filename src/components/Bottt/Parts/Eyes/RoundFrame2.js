@@ -3,7 +3,6 @@ import React from 'react'
 const RoundFrame2 = () => {
   return (
     <>
-      <rect width="104" height="48" fill="#9F9F9F" />
       <rect
         y="11"
         width="104"
