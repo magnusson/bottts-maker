@@ -6,11 +6,16 @@
       "src": "/images/homescreen192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "/images/homescreen512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": "/",
-  "background_color": "#54acee",
+  "background_color": "#2b4e7e",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#54acee"
+  "theme_color": "#2b4e7e"
 }
