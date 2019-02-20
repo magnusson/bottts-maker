@@ -5,6 +5,7 @@ import { device, randomHex } from './utils'
 import Bottt from './components/Bottt/Bottt'
 import Controls from './components/Controls'
 import Download from './components/Download'
+import Credits from './components/Credits'
 
 const botttRef = React.createRef()
 
@@ -104,6 +105,7 @@ class App extends Component {
         >
           <Button onClick={this.randomizeBottt}>Randomize</Button>
           <Download svgRef={botttRef} size={size} />
+          <Credits />
         </Controls>
       </Main>
     )

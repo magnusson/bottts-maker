@@ -18,6 +18,6 @@ const Texture = props => {
   }
   const typeKeys = Object.keys(types)
   const Type = types[typeKeys[props.type]]
-  return <g id="texture">{Type && <Type />}</g>
+  return <g id="texture_part">{Type && <Type />}</g>
 }
 export default Texture
