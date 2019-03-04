@@ -31,7 +31,7 @@ class Credits extends Component {
         <p>
           Developed by{' '}
           <a
-            href="https://www.rickardmagnusson.me/"
+            href="https://magnusson.dev/"
             target="_blank"
             rel="noopener noreferrer"
           >
