@@ -21,6 +21,10 @@ const Main = styled.div`
 `
 
 const BotttWrapper = styled(Bottt)`
+  background-color: #2b4e7e;
+  width: 100%;
+  position: sticky;
+  top: 0;
   margin: 25px auto;
 
   @media ${device.tablet} {
