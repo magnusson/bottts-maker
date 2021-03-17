@@ -1,9 +1,9 @@
-import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import App from './App'
 
-test('renders text', () => {
-  render(<App />)
-  const linkElement = screen.getByText(/get bottts/i)
-  expect(linkElement).toBeInTheDocument()
+test('render div with className', () => {
+  const { container } = render(<App />)
+  expect(container.firstChild).toHaveClass(
+    'flex flex-col h-screen justify-center items-center'
+  )
 })
