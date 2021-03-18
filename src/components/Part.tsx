@@ -1,11 +1,12 @@
 import { memo } from 'react'
-import botttParts from '../util'
+import botttParts from '../botttParts'
+import { animation } from '../util'
 
 const Part = memo(({ type, part }: { type: string; part: string }) => {
-  const { animation, parts } = botttParts[type]
+  const { partAttributes, parts } = botttParts[type]
   const Elem = animation(parts[part])
 
-  return <Elem />
+  return <Elem partAttributes={partAttributes} />
 })
 
 export default Part

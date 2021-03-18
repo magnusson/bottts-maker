@@ -15,7 +15,7 @@ export const Artuito = () => (
       />
     </mask>
     <g mask="url(#artuito)">
-      <rect x="-1" y="-1" width="132" height="122" fill="#2F4858" />
+      <rect x="-1" y="-1" width="132" height="122" fill="#C8E1F1" />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -77,7 +77,7 @@ export const Round1 = () => (
       />
     </mask>
     <g mask="url(#round1)">
-      <rect x="-4" y="-2" width="138" height="124" fill="#5EF2B8" />
+      <rect x="-4" y="-2" width="138" height="124" fill="#C8E1F1" />
     </g>
   </>
 )

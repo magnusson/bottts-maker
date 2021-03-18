@@ -1,5 +1,5 @@
 import { useState, Dispatch, SetStateAction } from 'react'
-import botttParts from '../util'
+import botttParts from '../botttParts'
 
 const PartSelector = ({
   setPart,
@@ -14,8 +14,11 @@ const PartSelector = ({
       <div className="flex space-x-4 justify-center mb-6">
         <button onClick={() => setActivePart('faces')}>Faces</button>
         <button onClick={() => setActivePart('eyes')}>Eyes</button>
+        <button onClick={() => setActivePart('mouths')}>Mouths</button>
+        <button onClick={() => setActivePart('sides')}>Sides</button>
+        <button onClick={() => setActivePart('tops')}>Tops</button>
       </div>
-      <div className="flex space-x-4 mb-6">
+      <div className="flex space-x-4 mx-auto">
         {Object.keys(parts).map((part) => {
           const Part = parts[part]
 
@@ -27,10 +30,7 @@ const PartSelector = ({
                 height="64"
                 viewBox="0 0 180 180"
               >
-                <g
-                  id="eyes_part"
-                  transform={`translate(${position.x}, ${position.y})`}
-                >
+                <g transform={`translate(${position.x}, ${position.y})`}>
                   <Part />
                 </g>
               </svg>
