@@ -1,29 +1,35 @@
-import { useState, Dispatch, SetStateAction } from 'react'
+import { useRef } from 'react'
+import { observer } from 'mobx-react-lite'
+import store, { setActivePart, setPart } from '../store'
 import botttParts from '../botttParts'
 
-const PartSelector = ({
-  setPart,
-}: {
-  setPart: Record<string, Dispatch<SetStateAction<string>>>
-}) => {
-  const [activePart, setActivePart] = useState('faces')
-  const { parts, position } = botttParts[activePart]
+const PartSelector = observer(() => {
+  const partsElement = useRef<HTMLInputElement>(null)
+  const { parts, position } = botttParts[store.activePart]
+
+  const changeActivePart = (type: string) => {
+    setActivePart(type)
+    partsElement.current!.scrollLeft = 0
+  }
 
   return (
     <div className="flex flex-col">
       <div className="flex space-x-4 justify-center mb-6">
-        <button onClick={() => setActivePart('faces')}>Faces</button>
-        <button onClick={() => setActivePart('eyes')}>Eyes</button>
-        <button onClick={() => setActivePart('mouths')}>Mouths</button>
-        <button onClick={() => setActivePart('sides')}>Sides</button>
-        <button onClick={() => setActivePart('tops')}>Tops</button>
+        <button onClick={() => changeActivePart('faces')}>Faces</button>
+        <button onClick={() => changeActivePart('eyes')}>Eyes</button>
+        <button onClick={() => changeActivePart('mouths')}>Mouths</button>
+        <button onClick={() => changeActivePart('sides')}>Sides</button>
+        <button onClick={() => changeActivePart('tops')}>Tops</button>
       </div>
-      <div className="flex space-x-4 mx-auto">
+      <div
+        className="max-w-full md:max-w-md self-center flex space-x-4 overflow-x-auto"
+        ref={partsElement}
+      >
         {Object.keys(parts).map((part) => {
           const Part = parts[part]
 
           return (
-            <button onClick={() => setPart[activePart](part)} key={part}>
+            <button onClick={() => setPart(store.activePart, part)} key={part}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="64"
@@ -40,6 +46,6 @@ const PartSelector = ({
       </div>
     </div>
   )
-}
+})
 
 export default PartSelector

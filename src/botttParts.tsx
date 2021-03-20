@@ -131,7 +131,7 @@ const botttParts: BotttParts = {
   },
   mouths: {
     parts: {
-      Artuito: ArtuitoMouth,
+      artuitoMouth: ArtuitoMouth,
       bite: Bite,
       diagram: Diagram,
       grill1: Grill1,

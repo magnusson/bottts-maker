@@ -1,4 +1,7 @@
-export const Antenna = () => (
+import { observer } from 'mobx-react-lite'
+import store from '../../store'
+
+export const Antenna = observer(() => (
   <>
     <mask
       id="antenna"
@@ -17,7 +20,7 @@ export const Antenna = () => (
       />
     </mask>
     <g mask="url(#antenna)">
-      <rect width="100" height="52" fill="#2F4858" />
+      <rect width="100" height="52" fill={store.tops.color} />
       <rect
         x="38"
         y="36"
@@ -40,9 +43,9 @@ export const Antenna = () => (
       fill="white"
     />
   </>
-)
+))
 
-export const ArtuitoTop = () => (
+export const ArtuitoTop = observer(() => (
   <>
     <mask
       id="artuitoTop"
@@ -61,7 +64,7 @@ export const ArtuitoTop = () => (
       />
     </mask>
     <g mask="url(#artuitoTop)">
-      <rect width="100" height="52" fill="#2F4858" />
+      <rect width="100" height="52" fill={store.tops.color} />
       <rect
         x="38"
         y="39"
@@ -84,9 +87,9 @@ export const ArtuitoTop = () => (
       fill="white"
     />
   </>
-)
+))
 
-export const Bulb1 = () => (
+export const Bulb1 = observer(() => (
   <>
     <mask
       id="bulb1"
@@ -105,7 +108,7 @@ export const Bulb1 = () => (
       />
     </mask>
     <g mask="url(#bulb1)">
-      <rect width="100" height="52" fill="#2F4858" />
+      <rect width="100" height="52" fill={store.tops.color} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -127,9 +130,9 @@ export const Bulb1 = () => (
       />
     </g>
   </>
-)
+))
 
-export const Bulb2 = () => (
+export const Bulb2 = observer(() => (
   <>
     <mask
       id="bulb2"
@@ -148,7 +151,7 @@ export const Bulb2 = () => (
       />
     </mask>
     <g mask="url(#bulb2)">
-      <rect width="100" height="52" fill="#2F4858" />
+      <rect width="100" height="52" fill={store.tops.color} />
       <rect
         x="20"
         y="-3"
@@ -172,9 +175,9 @@ export const Bulb2 = () => (
       />
     </g>
   </>
-)
+))
 
-export const GlowingBulb1 = () => (
+export const GlowingBulb1 = observer(() => (
   <>
     <g filter="url(#glowingBulb1Topfilter)">
       <path
@@ -198,7 +201,7 @@ export const GlowingBulb1 = () => (
       fill="white"
       fillOpacity="0.8"
     />
-    <rect x="22" y="40" width="56" height="12" rx="1" fill="#2F4858" />
+    <rect x="22" y="40" width="56" height="12" rx="1" fill={store.tops.color} />
     <mask
       id="glowingBulb1"
       mask-type="alpha"
@@ -261,9 +264,9 @@ export const GlowingBulb1 = () => (
       </filter>
     </defs>
   </>
-)
+))
 
-export const GlowingBulb2 = () => (
+export const GlowingBulb2 = observer(() => (
   <>
     <g filter="url(#glowingBulb2Topfilter)">
       <path
@@ -285,7 +288,7 @@ export const GlowingBulb2 = () => (
       d="M50 14.5C49.4477 14.5 49 14.9477 49 15.5C49 16.0523 49.4477 16.5 50 16.5V14.5ZM61.6941 21.6875C62.0649 22.0968 62.6973 22.1281 63.1066 21.7573C63.5159 21.3865 63.5471 20.7541 63.1763 20.3448L61.6941 21.6875ZM65.7595 24.0473C65.5035 23.5579 64.8993 23.3686 64.4099 23.6246C63.9205 23.8806 63.7313 24.4848 63.9873 24.9742L65.7595 24.0473ZM65.4248 28.9559C65.5404 29.4959 66.0719 29.84 66.6119 29.7244C67.152 29.6088 67.4961 29.0773 67.3805 28.5373L65.4248 28.9559ZM50 16.5C54.6375 16.5 58.8065 18.4999 61.6941 21.6875L63.1763 20.3448C59.9256 16.7563 55.2256 14.5 50 14.5V16.5ZM63.9873 24.9742C64.6357 26.2139 65.1239 27.5501 65.4248 28.9559L67.3805 28.5373C67.0411 26.9518 66.4904 25.4448 65.7595 24.0473L63.9873 24.9742Z"
       fill="white"
     />
-    <rect x="20" y="36" width="60" height="16" rx="1" fill="#2F4858" />
+    <rect x="20" y="36" width="60" height="16" rx="1" fill={store.tops.color} />
     <mask
       id="glowingBulb2"
       mask-type="alpha"
@@ -348,9 +351,9 @@ export const GlowingBulb2 = () => (
       </filter>
     </defs>
   </>
-)
+))
 
-export const Horns = () => (
+export const Horns = observer(() => (
   <>
     <mask
       id="horns"
@@ -369,7 +372,7 @@ export const Horns = () => (
       />
     </mask>
     <g mask="url(#horns)">
-      <rect width="100" height="52" fill="#2F4858" />
+      <rect width="100" height="52" fill={store.tops.color} />
       <rect y="40" width="100" height="12" fill="black" fillOpacity="0.4" />
       <path
         fillRule="evenodd"
@@ -387,9 +390,9 @@ export const Horns = () => (
       />
     </g>
   </>
-)
+))
 
-export const Lights = () => (
+export const Lights = observer(() => (
   <>
     <mask
       id="lights"
@@ -408,7 +411,7 @@ export const Lights = () => (
       />
     </mask>
     <g mask="url(#lights)">
-      <rect width="100" height="52" fill="#2F4858" />
+      <rect width="100" height="52" fill={store.tops.color} />
       <rect width="100" height="40" fill="white" fillOpacity="0.6" />
       <rect
         x="24"
@@ -439,7 +442,7 @@ export const Lights = () => (
       />
     </g>
   </>
-)
+))
 
 export const Plankton = () => (
   <>
@@ -558,7 +561,7 @@ export const Plankton = () => (
   </>
 )
 
-export const Pyramid = () => (
+export const Pyramid = observer(() => (
   <>
     <mask
       id="pyramid"
@@ -577,7 +580,7 @@ export const Pyramid = () => (
       />
     </mask>
     <g mask="url(#pyramid)">
-      <rect width="100" height="52" fill="#2F4858" />
+      <rect width="100" height="52" fill={store.tops.color} />
       <rect
         x="50"
         y="4"
@@ -588,9 +591,9 @@ export const Pyramid = () => (
       />
     </g>
   </>
-)
+))
 
-export const Radar = () => (
+export const Radar = observer(() => (
   <>
     <mask
       id="radar"
@@ -609,7 +612,7 @@ export const Radar = () => (
       />
     </mask>
     <g mask="url(#radar)">
-      <rect width="100" height="52" fill="#2F4858" />
+      <rect width="100" height="52" fill={store.tops.color} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -626,4 +629,4 @@ export const Radar = () => (
       />
     </g>
   </>
-)
+))

@@ -1,4 +1,7 @@
-export const ArtuioFace = () => (
+import { observer } from 'mobx-react-lite'
+import store from '../../store'
+
+export const ArtuioFace = observer(() => (
   <>
     <mask
       id="artuioFace"
@@ -15,7 +18,7 @@ export const ArtuioFace = () => (
       />
     </mask>
     <g mask="url(#artuioFace)">
-      <rect x="-1" y="-1" width="132" height="122" fill="#C8E1F1" />
+      <rect x="-1" y="-1" width="132" height="122" fill={store.faces.color} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -56,9 +59,9 @@ export const ArtuioFace = () => (
       />
     </g>
   </>
-)
+))
 
-export const RoboCopFace = () => (
+export const RoboCopFace = observer(() => (
   <>
     <mask
       id="roboCopFace"
@@ -77,7 +80,7 @@ export const RoboCopFace = () => (
       />
     </mask>
     <g mask="url(#roboCopFace)">
-      <rect x="-2" width="134" height="120" fill="#C8E1F1" />
+      <rect x="-2" width="134" height="120" fill={store.faces.color} />
       <rect
         x="4"
         y="80"
@@ -88,9 +91,9 @@ export const RoboCopFace = () => (
       />
     </g>
   </>
-)
+))
 
-export const RoundFace1 = () => (
+export const RoundFace1 = observer(() => (
   <>
     <mask
       id="roundFace1"
@@ -109,12 +112,12 @@ export const RoundFace1 = () => (
       />
     </mask>
     <g mask="url(#roundFace1)">
-      <rect x="-4" y="-2" width="138" height="124" fill="#C8E1F1" />
+      <rect x="-4" y="-2" width="138" height="124" fill={store.faces.color} />
     </g>
   </>
-)
+))
 
-export const RoundFace2 = () => (
+export const RoundFace2 = observer(() => (
   <>
     <mask
       id="roundFace2"
@@ -133,12 +136,12 @@ export const RoundFace2 = () => (
       />
     </mask>
     <g mask="url(#roundFace2)">
-      <rect x="-4" y="-2" width="138" height="124" fill="#C8E1F1" />
+      <rect x="-4" y="-2" width="138" height="124" fill={store.faces.color} />
     </g>
   </>
-)
+))
 
-export const SquareFace1 = () => (
+export const SquareFace1 = observer(() => (
   <>
     <mask
       id="squareFace1"
@@ -152,12 +155,12 @@ export const SquareFace1 = () => (
       <rect width="130" height="120" rx="18" fill="white" />
     </mask>
     <g mask="url(#squareFace1)">
-      <rect x="-2" y="-2" width="134" height="124" fill="#C8E1F1" />
+      <rect x="-2" y="-2" width="134" height="124" fill={store.faces.color} />
     </g>
   </>
-)
+))
 
-export const SquareFace2 = () => (
+export const SquareFace2 = observer(() => (
   <>
     <mask
       id="squareFace2"
@@ -174,12 +177,12 @@ export const SquareFace2 = () => (
       />
     </mask>
     <g mask="url(#squareFace2)">
-      <rect x="-2" y="-2" width="134" height="124" fill="#C8E1F1" />
+      <rect x="-2" y="-2" width="134" height="124" fill={store.faces.color} />
     </g>
   </>
-)
+))
 
-export const SquareFace3 = () => (
+export const SquareFace3 = observer(() => (
   <>
     <mask
       id="squareFace3"
@@ -198,12 +201,12 @@ export const SquareFace3 = () => (
       />
     </mask>
     <g mask="url(#squareFace3)">
-      <rect x="-2" y="-2" width="134" height="124" fill="#C8E1F1" />
+      <rect x="-2" y="-2" width="134" height="124" fill={store.faces.color} />
     </g>
   </>
-)
+))
 
-export const SquareFace4 = () => (
+export const SquareFace4 = observer(() => (
   <>
     <mask
       id="squareFace4"
@@ -222,7 +225,7 @@ export const SquareFace4 = () => (
       />
     </mask>
     <g mask="url(#squareFace4)">
-      <rect x="-2" y="-2" width="134" height="124" fill="#C8E1F1" />
+      <rect x="-2" y="-2" width="134" height="124" fill={store.faces.color} />
     </g>
   </>
-)
+))

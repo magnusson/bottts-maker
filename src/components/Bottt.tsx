@@ -1,33 +1,24 @@
 import { AnimatePresence } from 'framer-motion'
+import { observer } from 'mobx-react-lite'
+import store from '../store'
 import Part from './Part'
 
-const Bottt = ({
-  face,
-  eyes,
-  mouths,
-  sides,
-  tops,
-}: {
-  face: string
-  eyes: string
-  mouths: string
-  sides: string
-  tops: string
-}) => (
+const Bottt = observer(() => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="256"
     height="256"
     viewBox="0 0 180 180"
+    className="mx-auto"
   >
     <AnimatePresence initial={false}>
-      <Part type="tops" part={tops} key={tops} />
-      <Part type="sides" part={sides} key={sides} />
-      <Part type="faces" part={face} key={face} />
-      <Part type="eyes" part={eyes} key={eyes} />
-      <Part type="mouths" part={mouths} key={mouths} />
+      <Part type="tops" part={store.tops.part} key={store.tops.part} />
+      <Part type="sides" part={store.sides.part} key={store.sides.part} />
+      <Part type="faces" part={store.faces.part} key={store.faces.part} />
+      <Part type="eyes" part={store.eyes.part} key={store.eyes.part} />
+      <Part type="mouths" part={store.mouths.part} key={store.mouths.part} />
     </AnimatePresence>
   </svg>
-)
+))
 
 export default Bottt

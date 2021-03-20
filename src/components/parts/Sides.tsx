@@ -1,4 +1,7 @@
-export const Antenna1 = () => (
+import { observer } from 'mobx-react-lite'
+import store from '../../store'
+
+export const Antenna1 = observer(() => (
   <>
     <mask
       id="antenna1"
@@ -17,7 +20,7 @@ export const Antenna1 = () => (
       />
     </mask>
     <g mask="url(#antenna1)">
-      <rect width="180" height="76" fill="#2F4858" />
+      <rect width="180" height="76" fill={store.sides.color} />
       <rect y="38" width="180" height="38" fill="black" fillOpacity="0.1" />
     </g>
     <rect x="11" y="11" width="2" height="20" fill="white" fillOpacity="0.4" />
@@ -34,9 +37,9 @@ export const Antenna1 = () => (
       fill="white"
     />
   </>
-)
+))
 
-export const Antenna2 = () => (
+export const Antenna2 = observer(() => (
   <>
     <mask
       id="antenna2"
@@ -55,7 +58,7 @@ export const Antenna2 = () => (
       />
     </mask>
     <g mask="url(#antenna2)">
-      <rect width="180" height="76" fill="#2F4858" />
+      <rect width="180" height="76" fill={store.sides.color} />
       <rect y="38" width="180" height="38" fill="black" fillOpacity="0.1" />
     </g>
     <rect x="160" y="8" width="2" height="20" fill="white" fillOpacity="0.4" />
@@ -72,9 +75,9 @@ export const Antenna2 = () => (
       fill="white"
     />
   </>
-)
+))
 
-export const Cables1 = () => (
+export const Cables1 = observer(() => (
   <>
     <g opacity="0.9" fill="transparent">
       <path
@@ -107,12 +110,12 @@ export const Cables1 = () => (
       />
     </mask>
     <g mask="url(#cables1)">
-      <rect width="180" height="76" fill="#2F4858" />
+      <rect width="180" height="76" fill={store.sides.color} />
     </g>
   </>
-)
+))
 
-export const Cables2 = () => (
+export const Cables2 = observer(() => (
   <>
     <g opacity="0.9" fill="transparent">
       <path
@@ -166,12 +169,12 @@ export const Cables2 = () => (
       />
     </mask>
     <g mask="url(#cables2)">
-      <rect width="180" height="76" fill="#2F4858" />
+      <rect width="180" height="76" fill={store.sides.color} />
     </g>
   </>
-)
+))
 
-export const RoundSide = () => (
+export const RoundSide = observer(() => (
   <>
     <mask
       id="roundSide"
@@ -190,13 +193,13 @@ export const RoundSide = () => (
       />
     </mask>
     <g mask="url(#roundSide)">
-      <rect width="180" height="76" fill="#2F4858" />
+      <rect width="180" height="76" fill={store.sides.color} />
       <rect x="20" width="140" height="76" fill="black" fillOpacity="0.2" />
     </g>
   </>
-)
+))
 
-export const SquareSide = () => (
+export const SquareSide = observer(() => (
   <>
     <mask
       id="squareSide"
@@ -215,13 +218,13 @@ export const SquareSide = () => (
       />
     </mask>
     <g mask="url(#squareSide)">
-      <rect width="180" height="76" fill="#2F4858" />
+      <rect width="180" height="76" fill={store.sides.color} />
       <rect y="38" width="180" height="38" fill="black" fillOpacity="0.1" />
     </g>
   </>
-)
+))
 
-export const SquareAssymetric = () => (
+export const SquareAssymetric = observer(() => (
   <>
     <mask
       id="squareAssymetric"
@@ -240,7 +243,7 @@ export const SquareAssymetric = () => (
       />
     </mask>
     <g mask="url(#squareAssymetric)">
-      <rect width="180" height="76" fill="#2F4858" />
+      <rect width="180" height="76" fill={store.sides.color} />
       <rect y="47" width="180" height="29" fill="black" fillOpacity="0.1" />
       <path
         fillRule="evenodd"
@@ -258,4 +261,4 @@ export const SquareAssymetric = () => (
       />
     </g>
   </>
-)
+))

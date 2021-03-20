@@ -1,35 +1,28 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { observer } from 'mobx-react-lite'
+import { randomizeBottt } from './store'
 import Bottt from './components/Bottt'
 import PartSelector from './components/PartSelector'
-import { getRandomPart } from './util'
 
-const App = () => {
-  const [face, setFace] = useState(getRandomPart('faces'))
-  const [eyes, setEyes] = useState(getRandomPart('eyes'))
-  const [mouths, setMouths] = useState(getRandomPart('mouths'))
-  const [sides, setSides] = useState(getRandomPart('sides'))
-  const [tops, setTops] = useState(getRandomPart('tops'))
+const App = observer(() => {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    randomizeBottt()
+    setLoading(false)
+  }, [])
 
   return (
-    <div className="flex flex-col justify-center items-center my-6">
-      <Bottt
-        face={face}
-        eyes={eyes}
-        mouths={mouths}
-        sides={sides}
-        tops={tops}
-      />
-      <PartSelector
-        setPart={{
-          faces: setFace,
-          eyes: setEyes,
-          mouths: setMouths,
-          sides: setSides,
-          tops: setTops,
-        }}
-      />
+    <div className="flex flex-col m-4">
+      {loading ? (
+        <p>Building Bottt...</p>
+      ) : (
+        <>
+          <Bottt />
+          <PartSelector />
+        </>
+      )}
     </div>
   )
-}
+})
 
 export default App

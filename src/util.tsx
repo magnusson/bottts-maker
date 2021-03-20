@@ -17,3 +17,7 @@ export const getRandomPart = (type: string) => {
 
   return parts[(parts.length * Math.random()) << 0]
 }
+
+export const randomHex = () => {
+  return '#' + Math.random().toString(16).slice(2, 8)
+}
