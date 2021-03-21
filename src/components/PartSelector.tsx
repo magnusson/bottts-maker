@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { observer } from 'mobx-react-lite'
 import store, { setActivePart, setPart } from '../store'
 import botttParts from '../botttParts'
+import ColorPicker from './ColorPicker'
 
 const PartSelector = observer(() => {
   const partsElement = useRef<HTMLInputElement>(null)
@@ -21,28 +22,34 @@ const PartSelector = observer(() => {
         <button onClick={() => changeActivePart('sides')}>Sides</button>
         <button onClick={() => changeActivePart('tops')}>Tops</button>
       </div>
-      <div
-        className="max-w-full md:max-w-md self-center flex space-x-4 overflow-x-auto"
-        ref={partsElement}
-      >
-        {Object.keys(parts).map((part) => {
-          const Part = parts[part]
+      <div className="flex justify-center md:max-w-md md:mx-auto relative">
+        <div
+          className="max-w-full self-center flex space-x-4 overflow-x-auto"
+          ref={partsElement}
+        >
+          {Object.keys(parts).map((part) => {
+            const Part = parts[part]
 
-          return (
-            <button onClick={() => setPart(store.activePart, part)} key={part}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="64"
-                height="64"
-                viewBox="0 0 180 180"
+            return (
+              <button
+                onClick={() => setPart(store.activePart, part)}
+                key={part}
               >
-                <g transform={`translate(${position.x}, ${position.y})`}>
-                  <Part />
-                </g>
-              </svg>
-            </button>
-          )
-        })}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="64"
+                  height="64"
+                  viewBox="0 0 180 180"
+                >
+                  <g transform={`translate(${position.x}, ${position.y})`}>
+                    <Part />
+                  </g>
+                </svg>
+              </button>
+            )
+          })}
+        </div>
+        {store[store.activePart].color && <ColorPicker />}
       </div>
     </div>
   )

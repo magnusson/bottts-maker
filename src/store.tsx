@@ -42,4 +42,8 @@ export const setPart = action(
   (type: string, part: string) => (store[type].part = part)
 )
 
+export const setColor = action(
+  (type: string, color: string) => (store[type].color = color)
+)
+
 export default store
