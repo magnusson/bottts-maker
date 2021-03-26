@@ -3,5 +3,7 @@ import App from './App'
 
 test('render div with className', () => {
   const { container } = render(<App />)
-  expect(container.firstChild).toHaveClass('flex flex-col m-4')
+  expect(container.firstChild).toHaveClass(
+    'flex flex-col md:max-w-md md:mx-auto m-4'
+  )
 })

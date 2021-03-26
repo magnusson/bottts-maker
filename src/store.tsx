@@ -1,25 +1,34 @@
 import { observable, action } from 'mobx'
 import { randomHex, getRandomPart } from './util'
 
-const store: Record<string, any> = observable({
+interface states {
+  activePart: string
+  colorPickerOpen: boolean
+}
+
+export const uiStore: states = observable({
   activePart: 'faces',
+  colorPickerOpen: false,
+})
+
+const store: Record<string, Record<string, string>> = observable({
   faces: {
-    part: null,
-    color: null,
+    part: '',
+    color: '',
   },
   eyes: {
-    part: null,
+    part: '',
   },
   mouths: {
-    part: null,
+    part: '',
   },
   sides: {
-    part: null,
-    color: null,
+    part: '',
+    color: '',
   },
   tops: {
-    part: null,
-    color: null,
+    part: '',
+    color: '',
   },
 })
 
@@ -35,7 +44,7 @@ export const randomizeBottt = action(() => {
 })
 
 export const setActivePart = action(
-  (activePart: string) => (store.activePart = activePart)
+  (activePart: string) => (uiStore.activePart = activePart)
 )
 
 export const setPart = action(
@@ -44,6 +53,10 @@ export const setPart = action(
 
 export const setColor = action(
   (type: string, color: string) => (store[type].color = color)
+)
+
+export const toggleColorPicker = action(
+  (isOpen: boolean) => (uiStore.colorPickerOpen = isOpen)
 )
 
 export default store
